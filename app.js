@@ -9,6 +9,8 @@ let isGoingRight = true
 let direction = 1
 let results = 0
 const squares = []
+let contador = 0;
+const contadorDisplay = document.querySelector(".contador")
 
 const alienInvaders = [
     0, 1, 2, 3, 4, 5, 6, 7, 8, 9,
@@ -82,11 +84,20 @@ function moveInvaders() {
     if (squares[currentShooterIndex].classList.contains("invader")) {
         resultDisplay.innerHTML = "GAME OVER"
         clearInterval(invadersId)
+        contador = 0;
+        contadorDisplay.innerHTML = "Racha: " + contador
+
+        const boton = document.getElementById('jugar');
+        boton.addEventListener('click', resetear);
+        
+
     }
     
     if (aliensRemoved.length === alienInvaders.length) {
         resultDisplay.innerHTML = "YOU WIN"
         clearInterval(invadersId)
+        contador += 1;
+        contadorDisplay.innerHTML = "Racha: " + contador
         resetear()
     }
 }
@@ -160,9 +171,14 @@ function resetear() {
         30, 31, 32, 33, 34, 35, 36, 37, 38, 39
     );
 
+  
+
     // Iniciar un nuevo juego
     iniciar()
 }
+
+const boton = document.getElementById('jugar');
+boton.addEventListener('click', () => alert("Ya hay una partida en curso"));
 
 
 
