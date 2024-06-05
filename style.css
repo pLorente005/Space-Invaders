@@ -1,3 +1,35 @@
+
+body {
+    font-family: Arial, sans-serif;
+    background-color: #fff;
+    color: #000000;
+    
+}
+
+h1.results {
+    font-size: 3rem;
+    margin-top: 50px;
+}
+
+h2.contador {
+    font-size: 1.5rem;
+    margin-top: 20px;
+}
+button#jugar {
+    background-color: #007bff;
+    color: #fff;
+    border: none;
+    padding: 10px 20px;
+    font-size: 1.5rem;
+    cursor: pointer;
+    margin-top: 20px;
+    transition: background-color 0.3s ease;
+	margin-bottom: 20px;
+
+}
+button#jugar:hover {
+    background-color: #0056b3;
+}
 .grid {
 	width: 300px;
 	height: 300px;
@@ -12,18 +44,29 @@
 }
 
 .invader {
-	background-color: purple;
-	border-radius: 10px;
+	width: 50px; 
+	height: 50px; 
+	background-image: url('invader.jpg'); 
+	background-size: cover;
 }
 
 .shooter {
-	background-color: green;
+	width: 50px; 
+	height: 50px; 
+	background-image: url('shoter.png'); 
+	background-size: cover;
 }
 
 .laser {
-	background-color: orange;
+	width: 50px; 
+	height: 50px; 
+	background-image: url('lazer.webp'); 
+	background-size: cover;
 }
 
 .boom {
-	background-color: red;
+	width: 50px; 
+	height: 50px; 
+	background-image: url('boom.jpg'); 
+	background-size: cover;
 }
